@@ -3,10 +3,10 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 function ProductList({ products, addToCart, addToWishlist, wishlist }) {
   return (
-    <div className="flex flex-col gap-4 mt-12">
-      <h2 className="text-2xl font-bold text-black mb-6 text-center">
-        Explore Our Products
-      </h2>
+    <div className="mt-12 bg-white rounded-xl shadow-md p-8">
+              <h2 className="text-2xl font-bold text-center text-purple-600 mb-8">
+                🛒 Explore Our Products
+              </h2>
       <div className="grid gap-4 grid-cols-[repeat(auto-fill,_minmax(180px,_1fr))]">
         {products.map((product) => {
           const isWishlisted = wishlist.some((item) => item.id === product.id);
