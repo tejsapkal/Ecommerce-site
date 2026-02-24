@@ -12,11 +12,10 @@ const categories = [
 function CategoryBar({ selected, setSelected }) {
   return (
     <div className="flex flex-col items-center gap-4">
-      {/* Title */}
-      <h2 className="text-2xl font-bold text-black mb-4">
-        Brows By Categories
-      </h2>
-
+      <div className="mt-12 bg-white rounded-xl shadow-md p-8">
+              <h2 className="text-2xl font-bold text-center text-purple-600 mb-8">
+              🛍️ Browse By Categories 
+              </h2>
       {/* banners */}
       <div className="flex flex-wrap justify-center gap-4">
         {categories.map((cat) => (
