@@ -37,7 +37,8 @@ function ProductList({ products, addToCart, addToWishlist, wishlist }) {
 
               <button
                 onClick={() => addToCart(product)}
-                className="bg-purple-600 text-white px-3 py-1 rounded text-sm w-full" >
+                className="bg-purple-600 text-white px-3 py-1 rounded  transition-all duration-200
+             hover:bg-purple-700 hover:scale-105  text-sm w-full" >
                 Add to Cart
               </button>
             </div>
