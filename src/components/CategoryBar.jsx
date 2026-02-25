@@ -9,7 +9,7 @@ const categories = [
   { name: "Home", image: "/images/home.jpg" },
 ];
 
-function CategoryBar({ selected, setSelected }) {
+function CategoryBar({ setSelected }) {
   return (
     <div className="flex flex-col items-center gap-4">
       <div className="mt-12 bg-white rounded-xl shadow-md p-8">
