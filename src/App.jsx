@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import UsernameEntry from "./components/UsernameEntry";
 import ProductList from "./components/ProductList";
 import Wishlist from "./components/Wishlist";
@@ -16,6 +16,30 @@ export default function App() {
   const [page, setPage] = useState("home");
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
+  
+{/* local storage */}
+  useEffect(() => {
+    const savedUser = localStorage.getItem("username");
+    const savedOrders = localStorage.getItem("orders");
+
+    if (savedUser) {
+      setUsername(JSON.parse(savedUser));
+    }
+
+    if (savedOrders) {
+      setOrders(JSON.parse(savedOrders));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (username) {
+      localStorage.setItem("username", JSON.stringify(username));
+    }
+  }, [username]);
+
+  useEffect(() => {
+    localStorage.setItem("orders", JSON.stringify(orders));
+  }, [orders]);
 
   const toggleWishlist = (product) => {
     const exists = wishlist.find((p) => p.id === product.id);
