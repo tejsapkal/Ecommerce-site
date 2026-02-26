@@ -33,6 +33,8 @@ function CategoryBar({ setSelected }) {
           </div>
         ))}
       </div>
+
+       </div> 
     </div>
   );
 }
